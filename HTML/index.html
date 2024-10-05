@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="shortcut icon" type="image/png" href="https://ggscore.com/media/logo/t68908.png?39">
+<link rel="stylesheet" href="../CSS/index.css">
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
@@ -23,18 +24,19 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide"><b>LOGO</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="#" class="w3-bar-item w3-button">Shirts</a>
-    <a href="#" class="w3-bar-item w3-button">Dresses</a>
+    <a href="Home.html" class="w3-bar-item w3-button">Home</a>
+    <!-- <a href="#" class="w3-bar-item w3-button">Dresses</a> -->
     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
       Type <i class="fa fa-caret-down"></i>
     </a>
     <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
-      <a href="#" class="w3-bar-item w3-button">Relaxed</a>
+      <!-- <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Fashion shoes</a> -->
+      <a href="#" class="w3-bar-item w3-button">Fashion shoes</a>
+      <a href="#" class="w3-bar-item w3-button">Sports shoes</a>
       <a href="#" class="w3-bar-item w3-button">Bootcut</a>
       <a href="#" class="w3-bar-item w3-button">Straight</a>
     </div>
-    <a href="#" class="w3-bar-item w3-button">Jackets</a>
+    <a href="cart.html" class="w3-bar-item w3-button">Cart</a>
     <a href="#" class="w3-bar-item w3-button">Gymwear</a>
     <a href="#" class="w3-bar-item w3-button">Blazers</a>
     <a href="#" class="w3-bar-item w3-button">Shoes</a>
@@ -61,20 +63,21 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
-    <p class="w3-left">Jeans</p>
+    <h1 class="w3-left" style="  color: white;">Home </h1>
     <p class="w3-right">
-      <i class="fa fa-shopping-cart w3-margin-right"></i>
-      <i class="fa fa-search"></i>
+      <i class="fa fa-shopping-cart w3-margin-right" style="color: white;"></i>
+      <i class="fa fa-search" style="color: white;"></i>
     </p>
   </header>
 
   <!-- Image header -->
   <div class="w3-display-container w3-container">
-    <img src="/w3images/jeans.jpg" alt="Jeans" style="width:100%">
+    
+    <img src="https://th.bing.com/th/id/R.0e7aa60836117afe21b1631f02b73e75?rik=IftXed0dof1nMQ&pid=ImgRaw&r=0" alt="Jeans" style="width:100%">
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
-      <h1 class="w3-jumbo w3-hide-small">New arrivals</h1>
-      <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
-      <h1 class="w3-hide-small">COLLECTION 2016</h1>
+      <h1 class="w3-jumbo w3-hide-small" style="color: black;">New arrivals</h1>
+      <h1 class="w3-hide-large w3-hide-medium" style="color: black;">New arrivals</h1>
+      <h1 class="w3-hide-small" style="color: black;">COLLECTION 2016</h1>
       <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
     </div>
   </div>
@@ -87,19 +90,31 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class="w3-row w3-grayscale">
     <div class="w3-col l3 s6">
       <div class="w3-container">
-        <img src="/w3images/jeans1.jpg" style="width:100%">
-        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+        <div class="w3-display-container">
+          <img src="https://www.manlymanafrica.com/public/uploads/all/26eB8xsVvSXfJnAZjYbfQqMFlnorgrQi1rsFgMnM.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p style="color: white;">Mega Ripped Jeans<br><b style="color: white;">$19.99</b></p>
       </div>
       <div class="w3-container">
-        <img src="/w3images/jeans2.jpg" style="width:100%">
-        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+        <div class="w3-display-container">
+          <img src="https://www.manlymanafrica.com/public/uploads/all/26eB8xsVvSXfJnAZjYbfQqMFlnorgrQi1rsFgMnM.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p style="color: white;">Mega Ripped Jeans<br><b style="color: white;">$19.99</b></p>
       </div>
     </div>
 
     <div class="w3-col l3 s6">
       <div class="w3-container">
         <div class="w3-display-container">
-          <img src="/w3images/jeans2.jpg" style="width:100%">
+          <img src="https://www.manlymanafrica.com/public/uploads/all/26eB8xsVvSXfJnAZjYbfQqMFlnorgrQi1rsFgMnM.jpg" style="width:100%">
           <span class="w3-tag w3-display-topleft">New</span>
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
@@ -108,35 +123,41 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         <p>Mega Ripped Jeans<br><b>$19.99</b></p>
       </div>
       <div class="w3-container">
-        <img src="/w3images/jeans3.jpg" style="width:100%">
+        <div class="w3-display-container">
+          <img src="https://www.manlymanafrica.com/public/uploads/all/26eB8xsVvSXfJnAZjYbfQqMFlnorgrQi1rsFgMnM.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
         <p>Washed Skinny Jeans<br><b>$20.50</b></p>
       </div>
     </div>
 
     <div class="w3-col l3 s6">
       <div class="w3-container">
-        <img src="/w3images/jeans3.jpg" style="width:100%">
+        <img src="https://www.manlymanafrica.com/public/uploads/all/26eB8xsVvSXfJnAZjYbfQqMFlnorgrQi1rsFgMnM.jpg" style="width:100%">
         <p>Washed Skinny Jeans<br><b>$20.50</b></p>
       </div>
       <div class="w3-container">
         <div class="w3-display-container">
-          <img src="/w3images/jeans4.jpg" style="width:100%">
+          <img src="https://www.manlymanafrica.com/public/uploads/all/26eB8xsVvSXfJnAZjYbfQqMFlnorgrQi1rsFgMnM.jpg" style="width:100%">
           <span class="w3-tag w3-display-topleft">Sale</span>
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
           </div>
         </div>
-        <p>Vintage Skinny Jeans<br><b class="w3-text-red">$14.99</b></p>
+        <p>Vintage Skinny Jeans<br><b>$14.99</b></p>
       </div>
     </div>
 
     <div class="w3-col l3 s6">
       <div class="w3-container">
-        <img src="/w3images/jeans4.jpg" style="width:100%">
+        <img src="https://www.manlymanafrica.com/public/uploads/all/26eB8xsVvSXfJnAZjYbfQqMFlnorgrQi1rsFgMnM.jpg" style="width:100%">
         <p>Vintage Skinny Jeans<br><b>$14.99</b></p>
       </div>
       <div class="w3-container">
-        <img src="/w3images/jeans1.jpg" style="width:100%">
+        <img src="https://www.manlymanafrica.com/public/uploads/all/26eB8xsVvSXfJnAZjYbfQqMFlnorgrQi1rsFgMnM.jpg" style="width:100%">
         <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
       </div>
     </div>
@@ -214,6 +235,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </div>
   </div>
 </div>
+</body>
+
+
 
 <script>
 // Accordion 
@@ -243,7 +267,6 @@ function w3_close() {
 </script>
 <script src="../JS/login.js"></script>
 <script src="../JS/signup.js"></script>
-<script src="../JS/app.js"></script>
 
 </body>
 </html>
