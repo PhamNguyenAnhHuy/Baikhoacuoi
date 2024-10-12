@@ -44,19 +44,20 @@ const firebaseConfig = {
 // Initialize Firebase
 
 const app = initializeApp(firebaseConfig);
-const database = getDatabase();
+const database = getDatabase();//lay data
 const auth = getAuth();
 
-var logIn = document.getElementById('signin-btn');
-logIn.addEventListener("click", (e) => {
+var logIn = document.getElementById('signin-btn');//lay gia tri button
+logIn.addEventListener("click", (e) => { 
     e.preventDefault();
-    var email = document.getElementById("unameId").value;
-    var password = document.getElementById("pwdId").value;
+    var email = document.getElementById("unameId").value;//lay gia tri email
+    var password = document.getElementById("pwdId").value;//lay gia tri password
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            console.log("sign in successfully");
+            
+              alert ("sign in successfully");
             window.location.href = "./index.html"
             // ... 
             // localStorage.setItem("Session", email);

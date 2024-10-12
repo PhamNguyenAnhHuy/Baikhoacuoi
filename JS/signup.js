@@ -23,7 +23,7 @@ const auth = getAuth();
 
 // Create user
 var signUp = document.getElementById('signup');
-signUp.addEventListener("click", (e) => {
+signUp.addEventListener("click", (e) => { 
     e.preventDefault();
     var username = document.getElementById("unameId").value;
     var email = document.getElementById("Email").value;
@@ -35,13 +35,13 @@ signUp.addEventListener("click", (e) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed up 
-                const user = userCredential.user;
+                const user = userCredential.user;//du lieu cua nguoi dung bi ma hoa
                  
                 //  window.location.href = "./login.html"
-                const userRef = ref(db, "user/" + user.uid)
+                const userRef = ref(db, "user/" + user.uid)//tao file ngdung chua gia tri ngdung
                 //save user at realtime database
             
-                var created = set(userRef, { email: email , password: password }).then(()=>{
+                var created = set(userRef, { email: email , password: password }).then(()=>{//
                     console.log("Create user: " + user + "successfully")
                     window.location ="../HTML/login.html"
                   });

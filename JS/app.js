@@ -62,7 +62,7 @@
     
 // });
 
-
+//function
 function upload() {
     var heading = document.getElementById("heading").value;
     var des = document.getElementById("description").value;
@@ -76,12 +76,12 @@ function upload() {
     console.log(imageName);
     //firebase storage reference
     //it is the path where your image will be stored
-    var storageRef = firebase.storage().ref('images/' + imageName);
+    var storageRef = firebase.storage().ref('images/' + imageName);//upload image vao storage firebase
     //upload image to selected storage reference
     //make sure you pass image here
-    var uploadTask = storageRef.put(image);
+    var uploadTask = storageRef.put(image);//dat gia tri url vao image
     //to get the state of image uploading....
-    uploadTask.on('state_changed', function (snapshot) {
+    uploadTask.on('state_changed', function (snapshot) {//luu tru toan bo qua trinh tai tai nguyen (image)
       //get task progress by following code
       var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
       console.log("upload is " + progress + " done");
@@ -90,10 +90,10 @@ function upload() {
       console.log(error.message);
     }, function () {
       //handle successfull upload here..
-      uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+      uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {//chup lai tai nguyen storage de goi element //lay gia tri hinh anh
         //get your image download url here and upload it to databse
         //our path where data is stored ...push is used so that every post have unique id
-        firebase.database().ref('blogs/').push().set({
+        firebase.database().ref('blogs/').push().set({ //lay tat ca gia tri nhap vao bai post dua vao database
           heading: heading,
           description: des,
           name_post: name_post,
@@ -114,7 +114,7 @@ function upload() {
     });
   
   }
-  window.onload = function () {
+  window.onload = function () { //load lai trang va bat dau lay lai data
     this.getdata();
   }
   
@@ -122,17 +122,17 @@ function upload() {
   function getdata() {
     firebase.database().ref('blogs/').once('value').then(function (snapshot) {
       //get your posts div
-      var posts_div = document.getElementById('posts');
+      var posts_div = document.getElementById('posts');//lay noi chua
       //remove all remaining data in that div
       // posts_div.innerHTML = "";
       //get data from firebase
-      var data = snapshot.val();
+      var data = snapshot.val();//chup lai gia tri
       console.log(data);
       //now pass this data to our posts div
       //we have to pass our data to for loop to get one by one
       //we are passing the key of that post to delete it from database
-      for (let [key ,value] of Object.entries(data)) {
-        posts_div.innerHTML = "<div class='w3-container w3-white w3-margin w3-padding-large'>" +
+      for (let [key ,value] of Object.entries(data)) { //lap lai cho chua
+        posts_div.innerHTML = "<div class='w3-container w3-white w3-margin w3-padding-large'>" + //tao nhung phan tu trong html trong js
           "<div class='w3-center'>" +
           "<h3>" + value.heading + "</h3>" +
           "<h5>" + value.description + ", <span class'w3-opacity'>" + value.date + "</span></h5>" + "</div>" +
@@ -149,8 +149,8 @@ function upload() {
   
   
   
-    // Toggle between hiding and showing blog replies/comments
-    document.getElementById("myBtn").click();
+  //   Toggle between hiding and showing blog replies/comments
+    document.getElementById("myBtn").click();//lay gia tri button bang id
   function myFunction(id) {
     var x = document.getElementById(id);
     if (x.className.indexOf("w3-show") == -1) {
@@ -167,20 +167,20 @@ function upload() {
 
 
 
-  let slideIndex = 1;
-  showSlides(slideIndex);
+  let slideIndex = 1; 
+  showSlides(slideIndex);//dat ve ban dau 
   
   function plusSlides(n) {
-      showSlides(slideIndex += n);
+      showSlides(slideIndex += n);//tiep theo
   }
   
   function currentSlide(n) {
-      showSlides(slideIndex = n);
+      showSlides(slideIndex = n);//slide hien tai
   }
   
   function showSlides(n) {
       let i;
-      let slides = document.getElementsByClassName("mySlides");
+      let slides = document.getElementsByClassName("mySlides");//goi thanh phan trong slide
       let dots = document.getElementsByClassName("dot");
       if (n > slides.length) { slideIndex = 1 }
       if (n < 1) { slideIndex = slides.length }
@@ -190,8 +190,8 @@ function upload() {
       for (i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
+      slides[slideIndex - 1].style.display = "block";//ep nguyen slide thanh block
+      dots[slideIndex - 1].className += " active";//
   }
 
 
